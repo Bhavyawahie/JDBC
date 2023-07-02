@@ -37,13 +37,15 @@ public class Start {
                     System.out.println("Enter The 'ID' of the Student you would want to delete.");
                     int StudentID = Integer.parseInt(bufferedReader.readLine());
                     if (StudentDAO.deleteStudentFromDB(StudentID)) {
+                        System.out.println("Deleting...");
+                        Thread.sleep(500);
                         System.out.println("Student deleted successfully!"); 
                     } else {
                         System.out.println("Something went wrong. Please Try Again!");
                     }
                     break;
                 case 3:
-                    // display student
+                    StudentDAO.showAllStudentsFromDB();
                     break;
                 case 4:
                     System.out.println("Exiting...");
