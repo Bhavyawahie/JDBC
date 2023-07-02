@@ -24,18 +24,23 @@ public class Start {
                     String StudentName = bufferedReader.readLine();
                     System.out.println("Enter The Phone Number of the Student.");
                     String StudentPhone = bufferedReader.readLine();
-                    System.out.println("Enter The City of residence of the Student.");
+                    System.out.println("Enter The City of Residence of the Student.");
                     String StudentCity = bufferedReader.readLine();
                     Student student = new Student(StudentName, StudentPhone, StudentCity);
-                    var response = StudentDAO.addStudentToDB(student);
-                    if(response) {
+                    if (StudentDAO.addStudentToDB(student)) {
                         System.out.println("Student added successfully!"); 
                     } else {
                         System.out.println("Something went wrong. Please Try Again!");
                     }
                     break;
                 case 2:
-                    // delete student
+                    System.out.println("Enter The 'ID' of the Student you would want to delete.");
+                    int StudentID = Integer.parseInt(bufferedReader.readLine());
+                    if (StudentDAO.deleteStudentFromDB(StudentID)) {
+                        System.out.println("Student deleted successfully!"); 
+                    } else {
+                        System.out.println("Something went wrong. Please Try Again!");
+                    }
                     break;
                 case 3:
                     // display student

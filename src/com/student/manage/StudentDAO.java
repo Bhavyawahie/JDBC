@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class StudentDAO {
+    
     public static boolean addStudentToDB(Student student) {
         Connection connection = CreateDB.createDBConnection();
         boolean flag = false;
@@ -18,7 +19,32 @@ public class StudentDAO {
             connection.close();
             flag = true;
         } catch (SQLException e) {
-            System.out.println("Connection Failed!");
+            System.out.println("Oops, Try again!");
+            e.printStackTrace();
+        } finally {
+            try {
+                if (connection != null && !connection.isClosed()) {
+                    connection.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return flag;
+    }
+
+    public static boolean deleteStudentFromDB(int studentId) {
+        Connection connection = CreateDB.createDBConnection();
+        boolean flag = false;
+        try {
+            String query = "DELETE FROM STUDENTS WHERE SID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, studentId);
+            preparedStatement.executeUpdate();
+            connection.close();
+            flag = true;
+        } catch (SQLException e) {
+            System.out.println("Oops, Try again!");
             e.printStackTrace();
         } finally {
             try {
