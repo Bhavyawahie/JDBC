@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import com.student.manage.Student;
+import com.student.manage.StudentDAO;
 
 public class Start {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -26,7 +27,12 @@ public class Start {
                     System.out.println("Enter The City of residence of the Student.");
                     String StudentCity = bufferedReader.readLine();
                     Student student = new Student(StudentName, StudentPhone, StudentCity);
-                    System.out.println(student);
+                    var response = StudentDAO.addStudentToDB(student);
+                    if(response) {
+                        System.out.println("Student added successfully!"); 
+                    } else {
+                        System.out.println("Something went wrong. Please Try Again!");
+                    }
                     break;
                 case 2:
                     // delete student
