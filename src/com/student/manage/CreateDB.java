@@ -1,3 +1,4 @@
+package com.student.manage;
 import io.github.cdimascio.dotenv.Dotenv;
 import java.sql.Connection;
 import java.sql.DriverManager;
