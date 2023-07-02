@@ -1,8 +1,10 @@
-package com.student.manage;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+import com.student.manage.Student;
 
 public class Start {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -17,6 +19,14 @@ public class Start {
             switch (choice) {
                 case 1:
                     // add student
+                    System.out.println("Enter The Name of the Student.");
+                    String StudentName = bufferedReader.readLine();
+                    System.out.println("Enter The Phone Number of the Student.");
+                    String StudentPhone = bufferedReader.readLine();
+                    System.out.println("Enter The City of residence of the Student.");
+                    String StudentCity = bufferedReader.readLine();
+                    Student student = new Student(StudentName, StudentPhone, StudentCity);
+                    System.out.println(student);
                     break;
                 case 2:
                     // delete student
