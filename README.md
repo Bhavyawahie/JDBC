@@ -40,24 +40,24 @@ git clone https://github.com/your-username/jdbc-student-management-app.git
    Usage: java -jar target/jdbc-student-management-app.jar add [options]
    
    Options:
-   -n, --name <student_name>: Specify the name of the student.
-   -p, --phone <phone_number>: Specify the phone number of the student.
-   -c, --city <city_name>: Specify the city of residence of the student.
+            <div>-n, --name <student_name>: Specify the name of the student.</div>
+            <div>-p, --phone <phone_number>: Specify the phone number of the student.</div>
+            <div>-c, --city <city_name>: Specify the city of residence of the student.</div>
 
 2. **DELETE** - Delete a student from the database.
    Usage: java -jar target/jdbc-student-management-app.jar delete [options]
    
    Options:
-   -id, --student-id <student_id>: Specify the ID of the student to delete.
+            <div>-id, --student-id <student_id>: Specify the ID of the student to delete.</div>
 
 3. **UPDATE** - Update a student in the database.
    Usage: java -jar target/jdbc-student-management-app.jar update [options]
    
    Options:
-   -id, --student-id <student_id>: Specify the ID of the student to update.
-   -n, --name <student_name>: Specify the updated name of the student.
-   -p, --phone <phone_number>: Specify the updated phone number of the student.
-   -c, --city <city_name>: Specify the updated city of residence of the student.
+            <div>-id, --student-id <student_id>: Specify the ID of the student to update.</div>
+            <div>-n, --name <student_name>: Specify the updated name of the student.</div>
+            <div>-p, --phone <phone_number>: Specify the updated phone number of the student.</div>
+            <div>-c, --city <city_name>: Specify the updated city of residence of the student.</div>
 
 4. **DISPLAY** - Display all students in the database.
    Usage: java -jar target/jdbc-student-management-app.jar display
