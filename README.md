@@ -13,6 +13,8 @@ JDBC is a Java API that allows Java programs to interact with relational databas
 - Utilize JDBC prepared statements to prevent SQL injection attacks and enhance security.
 - Perform database operations such as querying and filtering student records based on specific criteria.
 
+
+
 ## Getting Started
 
 To get started with the project, follow the step-by-step tutorial provided by Learn Code with Durgesh [here](https://www.youtube.com/watch?v=lZbl7Q21t4s&t=1364s). The tutorial covers the basics of JDBC and guides you through the process of building the Student Management App.
@@ -31,6 +33,39 @@ git clone https://github.com/your-username/jdbc-student-management-app.git
 3. Configure your database connection details in the code, including the database URL, username, and password in a environment variable file (.env).
 
 4. Run the application and interact with the command-line interface to perform CRUD operations on student records.
+
+## Available Commands
+
+1. **ADD** - Add a new student to the database.
+   Usage: java -jar target/jdbc-student-management-app.jar add [options]
+   
+   Options:
+   -n, --name <student_name>: Specify the name of the student.
+   -p, --phone <phone_number>: Specify the phone number of the student.
+   -c, --city <city_name>: Specify the city of residence of the student.
+
+2. **DELETE** - Delete a student from the database.
+   Usage: java -jar target/jdbc-student-management-app.jar delete [options]
+   
+   Options:
+   -id, --student-id <student_id>: Specify the ID of the student to delete.
+
+3. **UPDATE** - Update a student in the database.
+   Usage: java -jar target/jdbc-student-management-app.jar update [options]
+   
+   Options:
+   -id, --student-id <student_id>: Specify the ID of the student to update.
+   -n, --name <student_name>: Specify the updated name of the student.
+   -p, --phone <phone_number>: Specify the updated phone number of the student.
+   -c, --city <city_name>: Specify the updated city of residence of the student.
+
+4. **DISPLAY** - Display all students in the database.
+   Usage: java -jar target/jdbc-student-management-app.jar display
+
+5. **EXIT** - Exit the application.
+   Usage: java -jar target/jdbc-student-management-app.jar exit
+
+
 
 ## Contributions
 
