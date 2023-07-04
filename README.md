@@ -11,7 +11,7 @@ JDBC is a Java API that allows Java programs to interact with relational databas
 - Implement functionality to add, retrieve, update, and delete student records in the database.
 - Build a user-friendly command-line interface for interacting with the application.
 - Utilize JDBC prepared statements to prevent SQL injection attacks and enhance security.
-- Perform database operations such as querying and filtering student records based on specific criteria.
+- Perform database CRUD operations with persistance in a running database server.
 
 
 
@@ -37,43 +37,24 @@ git clone https://github.com/your-username/jdbc-student-management-app.git
 ## Available Commands
 
 1. **ADD** - Add a new student to the database.
-   Usage: java -jar target/jdbc-student-management-app.jar add [options]
-   
-   Options:
-            <div>-n, --name <student_name>: Specify the name of the student.</div>
-            <div>-p, --phone <phone_number>: Specify the phone number of the student.</div>
-            <div>-c, --city <city_name>: Specify the city of residence of the student.</div>
             
    ![ezgif com-video-to-gif (2)](https://github.com/Bhavyawahie/JDBC/assets/34278282/564257bb-e3ae-4068-a988-7a9bdfc693b3)
    
 
 3. **DELETE** - Delete a student from the database.
-   Usage: java -jar target/jdbc-student-management-app.jar delete [options]
    
-   Options:
-            <div>-id, --student-id <student_id>: Specify the ID of the student to delete.</div>
-            
    ![ezgif com-video-to-gif (3)](https://github.com/Bhavyawahie/JDBC/assets/34278282/70b40bd0-158a-4f95-9b81-6a37f10d5ce8)
 
 4. **UPDATE** - Update a student in the database.
-   Usage: java -jar target/jdbc-student-management-app.jar update [options]
-   
-   Options:
-            <div>-id, --student-id <student_id>: Specify the ID of the student to update.</div>
-            <div>-n, --name <student_name>: Specify the updated name of the student.</div>
-            <div>-p, --phone <phone_number>: Specify the updated phone number of the student.</div>
-            <div>-c, --city <city_name>: Specify the updated city of residence of the student.</div>
 
    ![ezgif com-video-to-gif (5)](https://github.com/Bhavyawahie/JDBC/assets/34278282/f14e1a41-41ef-46c8-9502-d93f850633e4)
 
 6. **DISPLAY** - Display all students in the database.
-   Usage: java -jar target/jdbc-student-management-app.jar display
    
    ![ezgif com-video-to-gif (1)](https://github.com/Bhavyawahie/JDBC/assets/34278282/b44e879b-b861-4cdb-9143-15c2bfb5a811)
 
 
 7. **EXIT** - Exit the application.
-   Usage: java -jar target/jdbc-student-management-app.jar exit
    
    ![ezgif com-video-to-gif (4)](https://github.com/Bhavyawahie/JDBC/assets/34278282/f21e0322-7eb2-400b-bde3-46440f52b02e)
 
